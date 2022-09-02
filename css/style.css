@@ -45,7 +45,10 @@ header {
   position: relative;
 }
 /* Start nav Bar */
-
+nav {
+  position: relative;
+  z-index: 1;
+}
 .menustyles li a {
   color: #000;
   font-size: 13px;
@@ -173,4 +176,131 @@ header {
   margin: 20px 0;
 }
 
+/* Start Faculties */
+.faculties {
+  background-color: var(--secondary-color);
+}
+.flip-cards {
+  width: 300px;
+  height: 300px;
+  transition: transform 0.5s;
+}
+
+.flip-card-inners {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.5);
+
+  transform-style: preserve-3d;
+
+  transform: rotateY(-45deg) scale(0.7);
+  transition: transform 0.5s;
+}
+.flip-cards:hover .flip-card-inners {
+  transform: rotateY(180deg);
+}
+
+.flip-card-fronts,
+.flip-card-backs {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  --webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-backs {
+  transform: rotateY(180deg);
+  background-color: steelblue;
+}
+.social-icons a {
+  color: #fff;
+  border: 1px solid #f4f4f4;
+  padding: 5px;
+  margin: 0 5px;
+}
+.social-icons a:hover {
+  background-color: blue;
+}
+
+/* En Faculties */
+
+/* 1FC */
+
 /* End About Us Section  */
+
+/* start Pricing Section */
+.pricingboxes {
+  background-color: #eee;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.pricingboxes:hover {
+  transform: translateY(-20px);
+}
+.price-headers {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 10px 0;
+}
+
+.prices {
+  font-size: 3rem;
+  font-weight: bold;
+  background: url(../assets/img/icon/pricebg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  line-height: 160px;
+}
+
+.price-items li {
+  margin: 10px 0;
+}
+/* End Pricing Section */
+
+/* Start Location area */
+.libcards {
+  perspective: 1000px;
+  position: relative;
+  /* overflow: hidden; */
+}
+.libcards:hover .libcontents {
+  width: 70%;
+  transform: rotateY(0deg);
+}
+.libcontents {
+  width: 0;
+  height: 100%;
+  background-color: #444;
+  color: #fff;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+
+  transform: rotateY(-90deg);
+  transform-origin: left center;
+
+  transition: all 0.6s;
+}
+
+.btn-infos {
+  width: 50%;
+  background-color: steelblue;
+  color: #fff;
+
+  text-align: center;
+  text-decoration: none;
+
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+.btn-infos:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+/* end Location area */
