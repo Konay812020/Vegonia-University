@@ -304,3 +304,22 @@ nav {
   color: #fff;
 }
 /* end Location area */
+/* Start Features Section */
+
+.features {
+  background-color: var(--secondary-color);
+}
+
+.feas img {
+  transform: rotateY(0) scale(0.4);
+  transition: transform 0.5s;
+}
+.feas:hover img {
+  transform: rotateY(1turn) scale(0.8);
+}
+.feas p {
+  font-size: 12px;
+  text-align: justify;
+}
+
+/* End  Features Section */
