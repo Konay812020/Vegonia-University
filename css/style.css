@@ -155,7 +155,7 @@ nav {
 .counteritems .fas {
   background: var(--primary-grad-color);
   color: transparent;
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
 }
 .counteritems h5 {
   font-size: 15px;
