@@ -34,3 +34,36 @@ getcountervalues.forEach(function (getcountervalue) {
 // 25CT
 
 // End Js Area 
+
+// Start Raing Section
+
+//  Start google code for Chart
+google.charts.load('current', {
+    'packages': ['corechart']
+});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Myanamr', 8],
+        ['Thailand', 2],
+        ['Singapore', 4],
+        ['Indonesia', 2],
+        ['Sirlanka', 8]
+    ]);
+
+    var options = {
+        title: 'International Students',
+        is3D: true,
+        width: 550,
+        height: 400
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+}
+// End  google code for Chart
+// End Rating Section
